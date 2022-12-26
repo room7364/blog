@@ -7,4 +7,8 @@ class ArticlesController < ApplicationController
     # Файлы вида по соглашению "articles" из директории "views/articles" получают доступ к переменным экземпляра данного класса "ArticlesController"
     @articles = Article.all
   end
+  # By default the "show" action will render "app/views/articles/show.html.erb"
+  def show
+    @article = Article.find(params[:id])
+  end
 end
