@@ -1,0 +1,11 @@
+<!-- Виды используются контроллерами
+
+ERB is a templating system that enaluates Ruby code embedded in a document. Anything you could write in a regular Ruby program can go inside ERB tags, though it's usually best to keep the contents of ERB tags shor, for readability-->
+<h1>Articles</h1>
+<ul>
+  <!-- This type of tags means "evaluate the enclosed Ruby code" -->
+  <% @articles.each do |article| %>
+    <!-- This type of tags means "evaluate the enclosed Ruby code and output the value it returns" -->
+    <li> <%= article.title %> </li>
+  <% end %>
+</ul>
