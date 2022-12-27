@@ -7,9 +7,7 @@ ERB is a templating system that enaluates Ruby code embedded in a document. Anyt
   <% @articles.each do |article| %>
     <!-- This type of tags means "evaluate the enclosed Ruby code and output the value it returns" -->
     <li> 
-      <a href="/articles/<%= article.id %>">
-        <%= article.title %>
-      </a>
+      <%= link_to article.title, article %>
     </li>
   <% end %>
 </ul>
